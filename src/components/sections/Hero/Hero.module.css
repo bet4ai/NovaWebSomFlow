@@ -1,0 +1,126 @@
+.hero {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: stretch;
+}
+
+.inner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 0 44px;
+}
+
+/* bloc de text */
+.copyBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text1 {
+  font-size: clamp(24px, 2.4vw, 30px);
+  line-height: 1.45;
+  max-width: 100%;
+  white-space: pre-line;
+  color: #111111;
+  margin: 0;
+}
+
+.text2 {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  opacity: 0;
+  animation: fadeInSecond 450ms ease-out forwards;
+}
+
+.italic {
+  font-style: italic;
+}
+
+@keyframes fadeInSecond {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* logo */
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .inner {
+    padding: 48px 0 36px;
+  }
+
+  .copyBlock {
+    width: min(640px, 100%);
+    gap: 18px;
+  }
+
+  .text1 {
+    font-size: 21px;
+  }
+
+  .text2 {
+    font-size: 27px;
+  }
+
+  .logo {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 40px 0 28px;
+  }
+
+  .copyBlock {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .text1 {
+    font-size: 18px;
+  }
+
+  .text2 {
+    font-size: 23px;
+  }
+
+  .logoWrapper {
+    margin-top: 28px;
+  }
+
+  .logo {
+    max-width: 360px;
+  }
+}

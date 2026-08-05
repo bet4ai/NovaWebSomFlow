@@ -1,0 +1,129 @@
+.section {
+  padding: 110px 0 120px;
+  background: #f7f3e7;
+}
+
+.inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 104px; /* espai per a la fletxa lateral */
+}
+
+/* Fletxa lateral, estil mockup */
+.arrow {
+  position: absolute;
+  left: 24px;
+  top: 122px;
+  color: #f6b22a;
+}
+
+.arrowIcon {
+  width: 76px;
+  height: 76px;
+  stroke-width: 2.4;
+}
+
+/* Header */
+
+.header {
+  max-width: 980px;
+  margin-bottom: 54px;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: clamp(44px, 4.8vw, 80px);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+  color: #000;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: clamp(18px, 1.9vw, 28px);
+  line-height: 1.32;
+  font-weight: 500;
+  color: #111;
+}
+
+.highlight {
+  background: rgba(246, 178, 42, 0.28);
+  padding: 0 4px;
+}
+
+/* Ítems */
+
+.items {
+  display: grid;
+  gap: 26px;
+  max-width: 720px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  stroke-width: 2.2;
+  color: #4f7594;
+}
+
+.itemTitle {
+  margin: 0 0 4px;
+  font-size: clamp(30px, 2.6vw, 42px);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #000;
+}
+
+.itemText {
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.25;
+  color: #111;
+  font-weight: 500;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 88px 0 104px;
+  }
+
+  .inner {
+    padding-left: 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .items {
+    max-width: 100%;
+  }
+
+  .item {
+    grid-template-columns: 42px 1fr;
+    gap: 16px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}
