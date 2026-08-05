@@ -1,6 +1,6 @@
 .section {
   padding: 110px 0 130px;
-  background:  #fff; /* o si prefereixes fons blanc complet */
+  background: #f7f3e7;
 }
 
 .inner {
@@ -83,16 +83,7 @@
 .check {
   color: #689e62;
 }
-.title {
-  max-width: 980px;
-  margin: 0;
-  font-size: clamp(42px, 5vw, 78px);
-  line-height: 0.95;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  color: #000;
-  text-align: center;
-}
+/* (duplicate removed) */
 
 /* embolcall perquè el logo s’alineï bé amb el text */
 .logoWrapper {

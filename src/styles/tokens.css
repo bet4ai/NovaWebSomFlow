@@ -4,51 +4,44 @@
      COLORS
   =========================== */
 
-  /* Background */
-
-  --color-background-primary: #FCFBF7;
-  --color-background-secondary: #F3EFE6;
-  --color-background-inverse: #000000;
+  /* Backgrounds */
+  --color-background-primary: #ffffff;
+  --color-background-sand: #f7f3e7;
+  --color-background-warm: #f6f1e3;
 
   /* Surface */
-
-  --color-surface-primary: #FFFFFF;
-  --color-surface-secondary: #F8F6F2;
-  --color-surface-warm: #BDA686;
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f8f6f2;
 
   /* Text */
-
   --color-text-primary: #000000;
-  --color-text-secondary: #4A4A4A;
-  --color-text-muted: #6F6F6F;
-  --color-text-inverse: #FCFBF7;
+  --color-text-secondary: #111111;
+  --color-text-muted: #6f6f6f;
+  --color-text-inverse: #ffffff;
 
   /* Brand */
-
   --color-brand-primary: #146243;
-  --color-brand-secondary: #689E62;
-  --color-brand-accent: #F6912C;
-  --color-brand-warm: #F6B22A;
-  --color-brand-coral: #EC5C44;
-  --color-brand-sand: #BDA686;
-  --color-brand-blush: #FAB4B4;
+  --color-brand-secondary: #689e62;
+  --color-brand-accent: #f6912c;
+  --color-brand-warm: #f6b22a;
+  --color-brand-coral: #ec5c44;
+  --color-brand-sand: #bda686;
+  --color-brand-blush: #fab4b4;
 
   /* Border */
-
-  --color-border-subtle: #EAE6DD;
-  --color-border-strong: #D5CCBC;
+  --color-border-subtle: #e8e3d8;
+  --color-border-strong: #d5ccbc;
 
   /* Semantic */
-
   --color-success: #146243;
-  --color-warning: #F6912C;
-  --color-danger: #EC5C44;
+  --color-warning: #f6912c;
+  --color-danger: #ec5c44;
 
   /* ===========================
      TYPOGRAPHY
   =========================== */
 
-  --font-heading: "larken", "Plus Jakarta Sans", Georgia, serif;
+  --font-heading: "larken", Georgia, serif;
   --font-body: "inter-18pt", "Inter", system-ui, sans-serif;
 
   --text-display: 6rem;
@@ -58,84 +51,59 @@
   --text-h3: 2rem;
 
   --text-lead: 1.25rem;
-  --text-body: 1.125rem;
-  --text-small: 1rem;
-  --text-caption: 0.875rem;
-  --text-quote: 1.5rem;
+  --text-body: 1.0625rem;
+  --text-small: 0.9375rem;
+  --text-caption: 0.8125rem;
 
   --leading-tight: 1.1;
   --leading-heading: 1.15;
   --leading-body: 1.65;
   --leading-relaxed: 1.8;
 
-  --tracking-tight: -0.02em;
-  --tracking-normal: 0;
-  --tracking-wide: 0.02em;
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.04em;
 
-  /* Font weights */
-
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   /* ===========================
-     SPACING
+     SPACING & LAYOUT
   =========================== */
 
-  --spacing-section: 8rem;
-  --spacing-section-mobile: 4rem;
+  --container-content: 760px;
+  --container-default: 1200px;
+  --container-wide: 1440px;
+  --container-padding: clamp(1.25rem, 4vw, 2.5rem);
 
-  --spacing-container: 2rem;
-
-  --spacing-content: 760px;
-  --spacing-page: 1200px;
-
-  --spacing-card: 2rem;
+  --section-space: 8rem;
+  --section-space-mobile: 4.5rem;
 
   /* ===========================
      RADIUS
   =========================== */
 
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
   --radius-pill: 9999px;
 
   /* ===========================
      SHADOWS
   =========================== */
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,.03);
-
-  --shadow-md:
-    0 4px 6px rgba(0,0,0,.03),
-    0 2px 4px rgba(0,0,0,.02);
-
-  --shadow-lg:
-    0 10px 15px rgba(0,0,0,.04),
-    0 4px 6px rgba(0,0,0,.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
 
   /* ===========================
      MOTION
   =========================== */
 
-  --ease-smooth: cubic-bezier(.22,1,.36,1);
-
-  --duration-fast: .15s;
-  --duration-normal: .3s;
-  --duration-slow: .5s;
-
-  /* Containers */
-
-    --container-content: 760px;
-    --container-default: 1200px;
-    --container-wide: 1440px;
-
-    --container-padding: clamp(1.5rem, 3vw, 2rem);
-
-    /* Sections */
-
---section-space: 8rem;
---section-space-mobile: 5rem;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.15s;
+  --duration-normal: 0.25s;
+  --duration-slow: 0.45s;
 }
