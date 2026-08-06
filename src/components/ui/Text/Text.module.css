@@ -28,6 +28,12 @@
   font-style: italic;
 }
 
+.lead {
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
 /* Colors */
 .primary {
   color: var(--color-text-primary);

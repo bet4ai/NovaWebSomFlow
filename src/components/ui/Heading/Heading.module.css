@@ -1,46 +1,29 @@
 .heading {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--leading-heading);
-  letter-spacing: var(--tracking-tight);
   margin: 0;
-}
-
-/* Sizing */
-.hero {
-  font-size: clamp(2.5rem, 6vw, var(--text-hero));
-  line-height: var(--leading-tight);
-}
-
-.h1 {
-  font-size: clamp(2.25rem, 5vw, var(--text-h1));
-}
-
-.h2 {
-  font-size: clamp(1.75rem, 4vw, var(--text-h2));
-}
-
-.h3 {
-  font-size: clamp(1.35rem, 3vw, var(--text-h3));
-}
-
-.h4 {
-  font-size: 1.5rem;
-}
-
-/* Colors */
-.default {
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--color-text-primary);
 }
 
-.brand {
-  color: var(--color-brand-primary);
+.h1 {
+  font-size: clamp(32px, 4vw, 40px);
 }
 
-.muted {
-  color: var(--color-text-muted);
+.h2 {
+  font-size: clamp(28px, 3vw, 32px);
 }
 
-.inverse {
-  color: var(--color-text-inverse);
+.h3 {
+  font-size: clamp(24px, 2.5vw, 28px);
+}
+
+.h4 {
+  font-size: clamp(20px, 2vw, 24px);
+}
+
+.hero {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }

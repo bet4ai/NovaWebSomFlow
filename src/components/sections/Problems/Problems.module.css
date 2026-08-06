@@ -1,6 +1,5 @@
 .section {
   min-height: 100vh;
-  background: #f6f1e3;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -71,7 +70,7 @@
 .iconWrap {
   width: 96px;
   height: 56px;
-  background: rgb(245, 218, 163);
+  background: rgb(255, 243, 220);
   display: flex;
   align-items: center;
   justify-content: center;

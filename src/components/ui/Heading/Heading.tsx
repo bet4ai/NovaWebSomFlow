@@ -1,39 +1,24 @@
-import type { HTMLAttributes, ReactNode } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "../../../lib/cn";
 import styles from "./Heading.module.css";
 
-export type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-export type HeadingSize = "hero" | "h1" | "h2" | "h3" | "h4";
-export type HeadingColor = "default" | "brand" | "muted" | "inverse";
+type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "hero";
+type HeadingAs = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
-export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
-  children: ReactNode;
-  as?: HeadingLevel;
-  size?: HeadingSize;
-  color?: HeadingColor;
+interface HeadingProps {
+  as?: HeadingAs;
+  variant?: HeadingVariant;
+  children: React.ReactNode;
   className?: string;
 }
 
-export function Heading({
-  children,
-  as: Component = "h2",
-  size,
-  color = "default",
-  className,
-  ...props
+export function Heading({ 
+  as: Component = "h1", 
+  variant = "h1", 
+  children, 
+  className 
 }: HeadingProps) {
-  const computedSize = size || (Component in styles ? (Component as HeadingSize) : "h2");
-
   return (
-    <Component
-      className={cn(
-        styles.heading,
-        styles[computedSize],
-        styles[color],
-        className
-      )}
-      {...props}
-    >
+    <Component className={cn(styles.heading, styles[variant], className)}>
       {children}
     </Component>
   );

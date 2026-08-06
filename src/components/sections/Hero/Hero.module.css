@@ -1,126 +1,186 @@
 .hero {
-  min-height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  align-items: stretch;
+  padding: 128px 0 96px;
+  background: var(--color-bg-primary);
 }
 
-.inner {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 120px 0 44px;
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-/* bloc de text */
-.copyBlock {
+.content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 22px;
-  width: min(720px, 100%);
-  margin: 0 auto;
-  padding: 0 24px;
+  gap: 24px;
 }
 
-.text1 {
-  font-size: clamp(24px, 2.4vw, 30px);
-  line-height: 1.45;
-  max-width: 100%;
-  white-space: pre-line;
-  color: #111111;
-  margin: 0;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--color-bg-secondary);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  width: fit-content;
 }
 
-.text2 {
-  font-size: clamp(28px, 3vw, 36px);
-  line-height: 1.15;
-  font-weight: 700;
-  color: #000000;
-  margin: 0;
-  opacity: 0;
-  animation: fadeInSecond 450ms ease-out forwards;
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-brand-primary);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
 }
 
-.italic {
-  font-style: italic;
-}
-
-@keyframes fadeInSecond {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
+@keyframes pulse {
+  0%, 100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
   }
 }
 
-/* logo */
-.logoWrapper {
-  width: 100%;
+.title {
+  font-size: clamp(40px, 5vw, 56px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+}
+
+.actions {
+  padding-top: 16px;
+}
+
+.metrics {
   display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  flex-wrap: wrap;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+}
+
+.metricLabel {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}
+
+.metricDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+}
+
+.visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 36px;
 }
 
-.logo {
+.card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
   width: 100%;
-  max-width: 860px;
-  height: auto;
-  display: block;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive */
-
-@media (max-width: 1024px) {
-  .inner {
-    padding: 48px 0 36px;
-  }
-
-  .copyBlock {
-    width: min(640px, 100%);
-    gap: 18px;
-  }
-
-  .text1 {
-    font-size: 21px;
-  }
-
-  .text2 {
-    font-size: 27px;
-  }
-
-  .logo {
-    max-width: 620px;
-  }
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 600;
 }
 
-@media (max-width: 640px) {
-  .inner {
-    padding: 40px 0 28px;
-  }
+.cardDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-brand-primary);
+  border-radius: 50%;
+}
 
-  .copyBlock {
-    padding: 0 20px;
-    gap: 16px;
-  }
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+}
 
-  .text1 {
-    font-size: 18px;
-  }
+.processStep {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
 
-  .text2 {
-    font-size: 23px;
-  }
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-brand-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 600;
+}
 
-  .logoWrapper {
-    margin-top: 28px;
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 96px 0 64px;
   }
-
-  .logo {
-    max-width: 360px;
+  
+  .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .visual {
+    height: auto;
+  }
+  
+  .metrics {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .metricDivider {
+    height: 32px;
   }
 }

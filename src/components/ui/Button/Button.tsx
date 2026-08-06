@@ -1,38 +1,31 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
-import { cn } from "@/lib/cn";
+import { cn } from "../../../lib/cn";
 import styles from "./Button.module.css";
 
-export type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
-export type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "secondary" | "tertiary";
+type ButtonSize = "medium" | "large";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
+interface ButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
-  fullWidth?: boolean;
+  children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
-export function Button({
-  children,
-  variant = "primary",
-  size = "md",
-  fullWidth = false,
+export function Button({ 
+  variant = "primary", 
+  size = "medium",
+  children, 
   className,
-  disabled,
-  ...props
+  onClick,
+  type = "button"
 }: ButtonProps) {
   return (
-    <button
-      className={cn(
-        styles.button,
-        styles[variant],
-        styles[size],
-        fullWidth && styles.fullWidth,
-        className
-      )}
-      disabled={disabled}
-      {...props}
+    <button 
+      type={type}
+      className={cn(styles.button, styles[variant], styles[size], className)}
+      onClick={onClick}
     >
       {children}
     </button>
